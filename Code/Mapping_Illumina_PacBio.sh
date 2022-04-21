@@ -17,13 +17,12 @@ bwa index /home/ellens/Durian_fruit/Analyses/04_Genome_assembly_PacBio/assPB.con
 
 
 bwa mem -t 2 /home/ellens/Durian_fruit/Analyses/04_Genome_assembly_PacBio/assPB.contigs.fasta \
-/home/ellens/Durian_fruit/Data/Raw_data/illumina_data/SRR6058604_scaffold_10.2P.fastq.gz \
 /home/ellens/Durian_fruit/Data/Raw_data/illumina_data/SRR6058604_scaffold_10.1P.fastq.gz \
+/home/ellens/Durian_fruit/Data/Raw_data/illumina_data/SRR6058604_scaffold_10.2P.fastq.gz \
 > /home/ellens/Durian_fruit/Analyses/07_mapping_PacBio_Illumina/mapped_pacbio_illumina.sam
 
-samtools view /home/ellens/Durian_fruit/Analyses/07_mapping_PacBio_Illumina/mapped_pacbio_illumina.sam \
-/home/ellens/Durian_fruit/Analyses/07_mapping_PacBio_Illumina/mapped_pacbio_illumina.bam
+samtools sort -@ 2 /home/ellens/Durian_fruit/Analyses/07_mapping_PacBio_Illumina/mapped_pacbio_illumina.sam \
+-o /home/ellens/Durian_fruit/Analyses/07_mapping_PacBio_Illumina/mapped_pacbio_illumina.bam
 
-samtools sort -@ 2 /home/ellens/Durian_fruit/Analyses/07_mapping_PacBio_Illumina/mapped_pacbio_illumina.sam -o /home/ellens/Durian_fruit/Analyses/07_mapping_PacBio_Illumina/mapped_pacbio_illumina.bam
-
-samtools index /home/ellens/Durian_fruit/Analyses/07_mapping_PacBio_Illumina/mapped_pacbio_illumina.bam /home/ellens/Durian_fruit/Analyses/07_mapping_PacBio_Illumina/mapped_pacbio_illumina.bai
+samtools index /home/ellens/Durian_fruit/Analyses/07_mapping_PacBio_Illumina/mapped_pacbio_illumina.bam \
+/home/ellens/Durian_fruit/Analyses/07_mapping_PacBio_Illumina/mapped_pacbio_illumina.bai
