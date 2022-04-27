@@ -20,3 +20,51 @@ star --runThreadN 8 --genomeDir /home/ellens/Durian_fruit/Analyses/11_mapping_DN
 --readFilesIn /home/ellens/Durian_fruit/Analyses/05_Trimmed_Transcriptome/trimmed_transcriptomes_scaffold_10_1P \
 /home/ellens/Durian_fruit/Analyses/05_Trimmed_Transcriptome/trimmed_transcriptomes_scaffold_10_2P \
 --outFileNamePrefix /home/ellens/Durian_fruit/Analyses/11_mapping_DNA_transcriptome/
+
+star --runThreadN 8 --genomeDir /home/ellens/Durian_fruit/Analyses/11_mapping_DNA_transcriptome/ \
+--readFilesCommand zcat
+--readFilesIn /home/ellens/Durian_fruit/Data/Raw_data/transcriptome/trimmed/SRR6040092_scaffold_10.1.fastq.gz \
+/home/ellens/Durian_fruit/Data/Raw_data/transcriptome/trimmed/SRR6040092_scaffold_10.2.fastq.gz \
+--outFileNamePrefix /home/ellens/Durian_fruit/Analyses/11_mapping_DNA_transcriptome/
+
+star --runThreadN 8 --genomeDir /home/ellens/Durian_fruit/Analyses/11_mapping_DNA_transcriptome/ \
+--readFilesCommand zcat
+--readFilesIn /home/ellens/Durian_fruit/Data/Raw_data/transcriptome/trimmed/SRR6040093_scaffold_10.1.fastq.gz \
+/home/ellens/Durian_fruit/Data/Raw_data/transcriptome/trimmed/SRR6040093_scaffold_10.2.fastq.gz \
+--outFileNamePrefix /home/ellens/Durian_fruit/Analyses/11_mapping_DNA_transcriptome/
+
+star --runThreadN 8 --genomeDir /home/ellens/Durian_fruit/Analyses/11_mapping_DNA_transcriptome/ \
+--readFilesCommand zcat
+--readFilesIn /home/ellens/Durian_fruit/Data/Raw_data/transcriptome/trimmed/SRR6040094_scaffold_10.1.fastq.gz \
+/home/ellens/Durian_fruit/Data/Raw_data/transcriptome/trimmed/SRR6040094_scaffold_10.2.fastq.gz \
+--outFileNamePrefix /home/ellens/Durian_fruit/Analyses/11_mapping_DNA_transcriptome/
+
+star --runThreadN 8 --genomeDir /home/ellens/Durian_fruit/Analyses/11_mapping_DNA_transcriptome/ \
+--readFilesCommand zcat
+--readFilesIn /home/ellens/Durian_fruit/Data/Raw_data/transcriptome/trimmed/SRR6040096_scaffold_10.1.fastq.gz \
+/home/ellens/Durian_fruit/Data/Raw_data/transcriptome/trimmed/SRR6040096_scaffold_10.2.fastq.gz \
+--outFileNamePrefix /home/ellens/Durian_fruit/Analyses/11_mapping_DNA_transcriptome/
+
+star --runThreadN 8 --genomeDir /home/ellens/Durian_fruit/Analyses/11_mapping_DNA_transcriptome/ \
+--readFilesCommand zcat
+--readFilesIn /home/ellens/Durian_fruit/Data/Raw_data/transcriptome/trimmed/SRR6040097_scaffold_10.1.fastq.gz \
+/home/ellens/Durian_fruit/Data/Raw_data/transcriptome/trimmed/SRR6040097_scaffold_10.2.fastq.gz \
+--outFileNamePrefix /home/ellens/Durian_fruit/Analyses/11_mapping_DNA_transcriptome/
+
+star --runThreadN 8 --genomeDir /home/ellens/Durian_fruit/Analyses/11_mapping_DNA_transcriptome/ \
+--readFilesCommand zcat
+--readFilesIn /home/ellens/Durian_fruit/Data/Raw_data/transcriptome/trimmed/SRR6156066_scaffold_10.1.fastq.gz \
+/home/ellens/Durian_fruit/Data/Raw_data/transcriptome/trimmed/SRR6156066_scaffold_10.2.fastq.gz \
+--outFileNamePrefix /home/ellens/Durian_fruit/Analyses/11_mapping_DNA_transcriptome/
+
+star --runThreadN 8 --genomeDir /home/ellens/Durian_fruit/Analyses/11_mapping_DNA_transcriptome/ \
+--readFilesCommand zcat
+--readFilesIn /home/ellens/Durian_fruit/Data/Raw_data/transcriptome/trimmed/SRR6156067_scaffold_10.1.fastq.gz \
+/home/ellens/Durian_fruit/Data/Raw_data/transcriptome/trimmed/SRR6156067_scaffold_10.2.fastq.gz \
+--outFileNamePrefix /home/ellens/Durian_fruit/Analyses/11_mapping_DNA_transcriptome/
+
+star --runThreadN 8 --genomeDir /home/ellens/Durian_fruit/Analyses/11_mapping_DNA_transcriptome/ \
+--readFilesCommand zcat
+--readFilesIn /home/ellens/Durian_fruit/Data/Raw_data/transcriptome/trimmed/SRR6156069_scaffold_10.1.fastq.gz \
+/home/ellens/Durian_fruit/Data/Raw_data/transcriptome/trimmed/SRR6156069_scaffold_10.2.fastq.gz \
+--outFileNamePrefix /home/ellens/Durian_fruit/Analyses/11_mapping_DNA_transcriptome/
