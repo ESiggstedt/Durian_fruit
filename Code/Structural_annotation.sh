@@ -4,8 +4,8 @@
 #SBATCH -p core
 #SBATCH -n 8
 #SBATCH -t 4:00:00
-#SBATCH -J Structural_annotation
-#SBATCH -o Structural_annotation.output
+#SBATCH -J Structural_annotation_b_gff3
+#SBATCH -o Structural_annotation_b_gff3.output
 #SBATCH --mail-type=ALL
 #SBATCH --mail-user ellen.siggstedt.1185@student.uu.se
 
@@ -18,15 +18,16 @@ module load GenomeThreader/1.7.0
 module load samtools/1.8
 module load GeneMark/4.33-es_Perl5.24.1
 
-# chmod a+w -R /home/ellens/Durian_fruit/Analyses/12_Structural_annotation/augustus_config/species/
+# chmod a+w -R /home/ellens/Durian_fruit/Analyses/12b_Structural_annotation_gff3/augustus_config/species/
 # cp -vf /sw/bioinfo/GeneMark/4.33-es/snowy/gm_key $HOME/.gm_key
 
 braker.pl --species="Durio zibethinus" \
---AUGUSTUS_CONFIG_PATH=/home/ellens/Durian_fruit/Analyses/12_Structural_annotation/augustus_config \
+--AUGUSTUS_CONFIG_PATH=/home/ellens/Durian_fruit/Analyses/12b_Structural_annotation_gff3/augustus_config \
 --AUGUSTUS_BIN_PATH=/sw/bioinfo/augustus/3.4.0/snowy/bin \
 --AUGUSTUS_SCRIPTS_PATH=/sw/bioinfo/augustus/3.4.0/snowy/scripts \
 --GENEMARK_PATH=/sw/bioinfo/GeneMark/4.33-es/snowy \
 --useexisting \
+--gff3 \
 --cores=8 \
 --genome=/home/ellens/Durian_fruit/Analyses/10_Remove_repeats_DNA/Remove_repeats_DNA/corrected_assembly.fasta.masked \
 --bam=/home/ellens/Durian_fruit/Analyses/11_mapping_DNA_transcriptome/SRR6040092_scaffold_10_mappedAligned.out.bam, \
