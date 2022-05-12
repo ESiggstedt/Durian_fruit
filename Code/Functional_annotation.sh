@@ -2,8 +2,8 @@
 #SBATCH -A uppmax2022-2-5
 #SBATCH -M snowy
 #SBATCH -p core
-#SBATCH -n 2
-#SBATCH -t 1:00:00
+#SBATCH -n 4
+#SBATCH -t 6:00:00
 #SBATCH -J Functional_annotation
 #SBATCH -o Functional_annotation.output
 #SBATCH --mail-type=ALL
@@ -15,6 +15,6 @@ module load eggNOG-mapper/2.1.5
 /sw/bioinfo/eggNOG-mapper/2.1.5/snowy/bin/emapper.py \
 -i /home/ellens/Durian_fruit/Analyses/10_Remove_repeats_DNA/Remove_repeats_DNA/corrected_assembly.fasta.masked \
 -o Functional_annotations \
---threads 2 \
 --output_dir /home/ellens/Durian_fruit/Analyses/13_Functional_annotation \
---itype genome
+--itype genome \
+--cpu 4
