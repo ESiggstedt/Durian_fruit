@@ -23,6 +23,3 @@ bwa mem -t 2 /home/ellens/Durian_fruit/Analyses/04_Genome_assembly_PacBio/assPB.
 
 samtools sort -@ 2 /home/ellens/Durian_fruit/Analyses/07_mapping_PacBio_Illumina/mapped_pacbio_illumina.sam \
 -o /home/ellens/Durian_fruit/Analyses/07_mapping_PacBio_Illumina/mapped_pacbio_illumina.bam
-
-samtools index /home/ellens/Durian_fruit/Analyses/07_mapping_PacBio_Illumina/mapped_pacbio_illumina.bam \
-/home/ellens/Durian_fruit/Analyses/07_mapping_PacBio_Illumina/mapped_pacbio_illumina.bai
