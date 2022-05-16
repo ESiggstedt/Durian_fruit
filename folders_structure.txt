@@ -1,0 +1,2 @@
+# Folder structure
+This folder are structured in three subfolders: Data, Analyses and Code. Here the file README.md can also be found. In the Data folder all the data used in this projekt can be found via softlinks. The folder Analyses contain a subfolder for each analysis step which is numbered in the order they are performed. In the Code folder all scripts used can be found.
