@@ -1,6 +1,6 @@
 # Durian fruit analysis
 
-These analyses investigate what genes are differently expressed in different tissues of the Durian zibethinus Musang King fruit which is interesting to get familiar with the reason to the odour of the fruit. The analysis softwares used to do this can be seen below with a description of what each software does in the analysis. Data used for this is PacBio and Illumina reads from DNA, and Illumina reads from transcriptomes.
+These analyses investigate what genes are differently expressed in different tissues of the Durian zibethinus Musang King fruit which is interesting to get familiar with the reason to the odour of the fruit. The analysis softwares used to do this can be seen below with a description of what each software does in the analysis. Data used for this is PacBio and Illumina reads from DNA, and Illumina reads from transcriptomes of different parts of the fruit (stalk, aril, leaf and root).
 
 ## FastQC
 FastQC is used to check the quality of all the sequencing reads from a selected scaffold that are used for the analysis. It's also used after the trimming which can be seen below. The command for doing this is:
@@ -10,7 +10,7 @@ module load bioinfo-tools FastQC
 fastqc -t 2 -q -o PATH_TO_OUTPUT_FOLDER/OUTPUT_FILE_NAME
 ```
 
-when standing in the folder where the reads are. 
+when standing in the folder where the reads are.
 
 ## MultiQC
 _Collect_qualitycontrols.sh_
@@ -18,7 +18,7 @@ MultiQC is used to collect the result from each type of quality control into a m
 
 ## Trimmomatic
 _Trimming_Transcriptome.sh_
-Trimmomatic is used for trimming untrimmed Illumina reads, used to for example remove adapters. Therefore the reads are the input.
+Trimmomatic is used for trimming untrimmed Illumina reads, for example removing adapters. Therefore the reads are the input.
 
 ## Canu
 _Genome_assembly_PacBio.sh_
@@ -38,7 +38,7 @@ Quast is used to evaluate how good the assembly is.
 
 ## RepeatMasker
 _Remove_repeats_DNA.sh_
-RepeatMasker is used to remove repeats in the corrected assembly from Pilon. Here a flag is used to specify which species is analysed.
+RepeatMasker is used to remove repeats in the corrected assembly from Pilon. Here a flag is used to specify which specie is analysed.
 
 ## Star
 _Mapping_DNA_transcriptome.sh_
@@ -46,8 +46,7 @@ Star is used one time for each of the transcriptome reads to map them to the dat
 
 ## Braker
 _Structural_annotation.sh_
-Braker is used to do a structural annotation. A flag is used to specify which species the analysis is performed for. The result from RepeatMasker and Star were used.
-The following commands were run before the script were run.
+Braker is used to do a structural annotation. A flag is used to specify which species the analysis is performed for. The result from RepeatMasker and Star were used. The following commands were run before the script were run.
 
 ```
 module load bioinfo-tools
@@ -85,3 +84,5 @@ if (!require("BiocManager", quietly = TRUE))
     install.packages("BiocManager")
 BiocManager::install("DESeq2")
 ```
+
+
